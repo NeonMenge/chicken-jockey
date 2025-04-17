@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+// Main SCSS entry point
+
+// Abstracts (Variables, Mixins)
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+// Base styles
+@import './base/base';
+
+// Layout styles
+@import './layout/container';
+@import './layout/header';
+@import './layout/footer';
+
+// Component styles
+@import './components/hero';
+@import './components/about';
+@import './components/tokenomics';
+@import './components/how-to-buy';
+@import './components/bottom-image';
+@import './components/animated-chicken';

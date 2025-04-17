@@ -1,0 +1,128 @@
+@import '../styles/abstracts/variables';
+@import '../styles/abstracts/mixins';
+
+.tokenomics-section {
+  position: relative;
+  background-color: $mc-green;
+  color: white;
+  padding: 4rem 0;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .tokenomics-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tokenomics__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .tokenomics__details {
+    width: 100%;
+    max-width: 600px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        border-left: 4px solid $chicken-white;
+        font-family: $font-display;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          display: block;
+          margin-bottom: 0.75rem;
+          color: $chicken-white;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .contract-address {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-family: monospace;
+    word-break: break-all;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1.1rem;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  // Tablet Portrait
+  @media (max-width: 768px) {
+    .tokenomics__content {
+      padding: 1.5rem;
+    }
+    
+    .tokenomics__details ul li {
+      font-size: 1.1rem;
+      
+      strong {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  // Phone
+  @media (max-width: 480px) {
+    padding: 3rem 0;
+    
+    .tokenomics__content {
+      padding: 1rem;
+    }
+    
+    .tokenomics__details {
+      ul {
+        li {
+          font-size: 1rem;
+          
+          strong {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

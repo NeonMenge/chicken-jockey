@@ -1,0 +1,181 @@
+// Styles for the How To Buy section
+
+.how-to-buy-section {
+  padding: 5rem 0;
+  background-color: $mc-white;
+  color: $mc-black;
+  position: relative;
+  z-index: 1;
+  
+  // Add pixelated background pattern
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0zm20 20h20v20H20z' fill='rgba(0,0,0,0.05)' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-size: 40px 40px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    color: $mc-black;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    background-color: $mc-green;
+    padding: 0.5rem 2rem;
+    border: 4px solid $mc-black;
+    box-shadow: 6px 6px 0 $mc-black;
+    color: $mc-white;
+    text-shadow: 2px 2px $mc-black;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    transform: none;
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    
+    .step {
+      background-color: $mc-stone;
+      padding: 2rem;
+      border: 4px solid $mc-black;
+      box-shadow: 4px 4px 0px $mc-black;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 8px 8px 0px $mc-black;
+        
+        .step__icon {
+          transform: scale(1.1) rotate(5deg);
+        }
+      }
+      
+      &:nth-child(odd) {
+        background-color: lighten($mc-stone, 5%);
+      }
+      
+      &:nth-child(even) {
+        transform: translateY(10px);
+        
+        &:hover {
+          transform: translateY(5px);
+        }
+      }
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right, $mc-green, $mc-brown);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover:after {
+        transform: scaleX(1);
+      }
+
+      &__icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 1.5rem;
+        image-rendering: pixelated;
+        transition: transform 0.3s ease;
+        filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.3));
+      }
+      
+      &__icon-placeholder {
+        font-size: 3rem;
+        margin: 0 auto 1.5rem;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($mc-black, 0.1);
+        border: 2px solid $mc-black;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.1) rotate(5deg);
+        }
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $mc-black;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+        text-decoration-color: rgba($mc-black, 0.3);
+        text-underline-offset: 4px;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: $mc-black;
+
+        &:last-child {
+          margin-top: 1rem;
+        }
+      }
+      
+      .contract-address {
+        word-break: break-all;
+        display: inline-block;
+        margin-top: 0.5rem;
+        background-color: rgba($mc-black, 0.6);
+        color: $mc-white;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+        font-size: 1.4rem;
+        border: 2px dashed rgba($mc-white, 0.5);
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        
+        &:hover {
+          background-color: rgba($mc-black, 0.8);
+          border-color: $mc-white;
+        }
+        
+        &:after {
+          content: '📋';
+          position: absolute;
+          right: -25px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

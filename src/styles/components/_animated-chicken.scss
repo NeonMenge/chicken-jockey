@@ -1,0 +1,160 @@
+// Animated Minecraft Chicken
+
+.animated-chicken {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 2rem auto 0;
+  filter: drop-shadow(0 4px 0 #000);
+  
+  // Chicken body
+  &__body {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    background-color: #fff;
+    border: 4px solid #000;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+    animation: chicken-body 2s infinite;
+    image-rendering: pixelated;
+  }
+  
+  // Chicken head
+  &__head {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 4px solid #000;
+    top: 10px;
+    left: 50px;
+    z-index: 3;
+    animation: chicken-head 2s infinite;
+    image-rendering: pixelated;
+  }
+  
+  // Chicken beak
+  &__beak {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: #ff9800;
+    border: 4px solid #000;
+    top: 30px;
+    left: 70px;
+    z-index: 4;
+    image-rendering: pixelated;
+  }
+  
+  // Chicken comb
+  &__comb {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: #f44336;
+    border: 4px solid #000;
+    top: 5px;
+    left: 55px;
+    z-index: 4;
+    image-rendering: pixelated;
+  }
+  
+  // Chicken legs
+  &__leg-left {
+    position: absolute;
+    width: 8px;
+    height: 30px;
+    background-color: #ff9800;
+    border: 2px solid #000;
+    top: 90px;
+    left: 50px;
+    z-index: 1;
+    animation: chicken-leg-left 0.5s infinite;
+    image-rendering: pixelated;
+  }
+  
+  &__leg-right {
+    position: absolute;
+    width: 8px;
+    height: 30px;
+    background-color: #ff9800;
+    border: 2px solid #000;
+    top: 90px;
+    left: 80px;
+    z-index: 1;
+    animation: chicken-leg-right 0.5s infinite;
+    image-rendering: pixelated;
+  }
+  
+  // Chicken wings
+  &__wing-left {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: #fff;
+    border: 4px solid #000;
+    top: 45px;
+    left: 30px;
+    z-index: 3;
+    animation: chicken-wing 1s infinite;
+    transform-origin: right center;
+    image-rendering: pixelated;
+  }
+  
+  &__wing-right {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: #fff;
+    border: 4px solid #000;
+    top: 45px;
+    left: 90px;
+    z-index: 3;
+    animation: chicken-wing 1s infinite 0.5s;
+    transform-origin: left center;
+    image-rendering: pixelated;
+  }
+  
+  // Chicken tail
+  &__tail {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: #fff;
+    border: 4px solid #000;
+    top: 35px;
+    left: 20px;
+    z-index: 1;
+    transform: rotate(-30deg);
+    image-rendering: pixelated;
+  }
+}
+
+// Animations
+@keyframes chicken-body {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes chicken-head {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+@keyframes chicken-leg-left {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-3px) translateY(-5px); }
+}
+
+@keyframes chicken-leg-right {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(3px) translateY(-5px); }
+}
+
+@keyframes chicken-wing {
+  0%, 100% { transform: rotate(0); }
+  50% { transform: rotate(-15deg); }
+}

@@ -1,0 +1,400 @@
+// Styles for the Hero section
+
+.hero-section {
+  padding: 8rem 0 6rem;
+  background-color: $mc-black;
+  background-image: 
+    linear-gradient(to bottom, rgba($mc-black, 0.85), rgba($mc-black, 0.7)), 
+    url('../assets/images/minecraft-bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  
+  // Pixelated border effect
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(
+      to right,
+      $mc-brown 0,
+      $mc-brown 8px,
+      $mc-stone 8px,
+      $mc-stone 16px
+    );
+    z-index: 2;
+  }
+  
+  // Particles
+  &__particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    .particle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $mc-green;
+      opacity: 0.5;
+      
+      &--1 {
+        top: 20%;
+        left: 10%;
+        animation: float-particle 8s ease-in-out infinite;
+      }
+      
+      &--2 {
+        top: 70%;
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        background-color: $mc-brown;
+        animation: float-particle 12s ease-in-out infinite 1s;
+      }
+      
+      &--3 {
+        top: 30%;
+        right: 15%;
+        width: 8px;
+        height: 8px;
+        background-color: $mc-white;
+        animation: float-particle 10s ease-in-out infinite 2s;
+      }
+      
+      &--4 {
+        bottom: 20%;
+        right: 10%;
+        width: 12px;
+        height: 12px;
+        background-color: $mc-brown;
+        animation: float-particle 9s ease-in-out infinite 1.5s;
+      }
+      
+      &--5 {
+        top: 50%;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        background-color: $mc-green;
+        animation: float-particle 15s ease-in-out infinite 3s;
+      }
+      
+      &--6 {
+        bottom: 30%;
+        left: 30%;
+        width: 10px;
+        height: 10px;
+        background-color: $mc-white;
+        animation: float-particle 11s ease-in-out infinite 2.5s;
+      }
+      
+      @keyframes float-particle {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(20px, -15px) rotate(90deg); }
+        50% { transform: translate(0, -30px) rotate(180deg); }
+        75% { transform: translate(-20px, -15px) rotate(270deg); }
+        100% { transform: translate(0, 0) rotate(360deg); }
+      }
+    }
+  }
+  
+  // Bottom decoration
+  &__bottom-decoration {
+    position: absolute;
+    bottom: 8px; // Positioned just above the border
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: repeating-linear-gradient(
+      to right,
+      $mc-green 0,
+      $mc-green 20px,
+      transparent 20px,
+      transparent 40px
+    );
+    z-index: 1;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  &__meme-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  
+  &__meme-left {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    
+    @media (max-width: 768px) {
+      margin-right: 0;
+      order: 1;
+    }
+  }
+  
+  &__meme-right {
+    flex: 0 0 auto;
+    margin-left: 1rem;
+    
+    @media (max-width: 768px) {
+      margin-left: 0;
+      order: 3;
+    }
+  }
+  
+  &__buttons-container {
+    flex: 1 1 auto;
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      order: 2;
+    }
+  }
+  
+  &__table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    
+    td {
+      padding: 10px;
+      vertical-align: middle;
+    }
+    
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      tbody, tr, td {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      
+      td {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  
+  &__meme {
+    width: 150px;
+    height: 150px;
+    border: 3px solid $mc-green;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+      border-color: lighten($mc-green, 10%);
+    }
+    
+    @media (max-width: 768px) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  .meme-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+      border-color: lighten($mc-green, 10%);
+    }
+    
+    @media (max-width: 768px) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  &__buttons {
+    flex: 1 1 auto;
+    margin: 0 auto;
+    text-align: center;
+    
+    .btn {
+      padding: 1.5rem 3.5rem !important;
+      font-size: 1.8rem !important;
+      background: linear-gradient(135deg, darken($mc-green, 10%) 0%, $mc-green 50%, lighten($mc-green, 10%) 100%) !important;
+      color: $mc-white !important;
+      border: 4px solid $mc-black !important;
+      box-shadow: 8px 8px 0 $mc-black !important;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.5) !important;
+      position: relative !important;
+      overflow: hidden !important;
+      transition: all 0.3s ease !important;
+      letter-spacing: 1px !important;
+      border-radius: 4px !important;
+      font-family: 'Press Start 2P', cursive !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      
+      &:before {
+        content: '' !important;
+        position: absolute !important;
+        top: -50% !important;
+        left: -50% !important;
+        width: 200% !important;
+        height: 200% !important;
+        background: radial-gradient(
+          circle,
+          rgba(255,255,255,0.3) 0%,
+          transparent 70%
+        ) !important;
+        opacity: 0 !important;
+        transform: scale(0.5) !important;
+        transition: all 0.4s ease-out !important;
+      }
+      
+      &:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 12px 12px 0 $mc-black !important;
+        
+        &:before {
+          opacity: 1 !important;
+          transform: scale(1) !important;
+        }
+      }
+      
+      &:active {
+        transform: translateY(-2px) !important;
+        box-shadow: 6px 6px 0 $mc-black !important;
+      }
+      
+      &--primary {
+        background: linear-gradient(135deg, darken($mc-green, 10%) 0%, $mc-green 50%, lighten($mc-green, 10%) 100%) !important;
+      }
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    padding: 6rem 0 4rem;
+    
+    h2 {
+      font-size: 2.4rem;
+    }
+    
+    p {
+      font-size: 1.8rem;
+    }
+    
+    &__buttons {
+      .btn--primary {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  
+  &__title-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__title-decoration {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: $mc-brown;
+    transform: rotate(45deg);
+    border: 3px solid $mc-black;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 14px;
+      height: 14px;
+      background-color: $mc-green;
+      transform: rotate(15deg);
+    }
+  }
+  
+  h2 {
+    font-size: 3.2rem;
+    color: $mc-white;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 0 $mc-black;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background-color: rgba($mc-green, 0.5);
+    }
+  }
+  
+  p {
+    font-size: 2rem;
+    color: $mc-white;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    position: relative;
+    
+    &:before, &:after {
+      content: '✦';
+      color: $mc-green;
+      margin: 0 10px;
+      font-size: 1.4rem;
+      opacity: 0.7;
+    }
+  }
+}

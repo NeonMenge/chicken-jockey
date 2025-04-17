@@ -1,0 +1,108 @@
+// Styles for the Site Footer
+
+.site-footer {
+  padding: 2.5rem 0;
+  background-color: $mc-black;
+  color: $mc-white;
+  border-top: 8px solid $mc-brown;
+  font-size: 1.4rem;
+  position: relative;
+  text-align: center;
+  
+  // Add pixelated border at top
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+      to right,
+      $mc-green 0,
+      $mc-green 10px,
+      $mc-brown 10px,
+      $mc-brown 20px
+    );
+    transform: translateY(-12px);
+  }
+  
+  &__title {
+    text-align: center;
+    padding: 2rem 0;
+    
+    h1 {
+      font-size: 4.2rem;
+      color: $mc-green;
+      text-shadow: 4px 4px 0 $mc-black;
+      margin: 0 auto;
+      position: relative;
+      display: inline-block;
+      letter-spacing: 2px;
+      
+      // Minecraft-style text border
+      &:before {
+        content: 'CHICKEN JOCKEY!';
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        color: $mc-black;
+        z-index: -1;
+      }
+    }
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  &__copyright {
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
+    position: relative;
+    font-size: 1.5rem;
+    
+    &:after {
+      content: '🐔';
+      margin-left: 8px;
+      font-size: 1.6rem;
+      vertical-align: middle;
+    }
+  }
+  
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 1rem;
+    
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: $mc-white;
+      transition: color 0.2s ease;
+      padding: 0.5rem;
+      
+      &:hover {
+        color: $mc-green;
+      }
+      
+      .social-icon {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// SCSS Variables
+
+// Fonts
+$font-display: 'Press Start 2P', monospace;
+
+// Colors (Minecraft inspired)
+$mc-green: #6A9A3A;       // Grass block green
+$mc-brown: #8B4513;       // Dirt/Wood brown
+$mc-stone: #A9A9A9;       // Stone grey
+$mc-sky-blue: #87CEEB;   // Sky blue
+$mc-dark-blue: #1D2B53;  // Minecraft night sky
+$mc-dirt: #866043;       // Minecraft dirt block
+$mc-white: #FFFFFF;
+$mc-black: #000000;
+$chicken-white: #FDFDF9; // Chicken White
+
+// Base Theme
+$color-background: $mc-sky-blue;  // Original sky blue background
+$color-text: $mc-black;
+$color-primary: $mc-green;
+$color-secondary: $mc-brown;

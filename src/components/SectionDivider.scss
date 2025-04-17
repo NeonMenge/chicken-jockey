@@ -1,0 +1,33 @@
+@import '../styles/abstracts/variables';
+
+.section-divider {
+  display: block;
+  width: 100%;
+  height: 8px;
+  background-color: $mc-brown;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-image: 
+      repeating-linear-gradient(
+        to right,
+        $mc-green 0px,
+        $mc-green 8px,
+        $mc-brown 8px,
+        $mc-brown 16px,
+        $mc-stone 16px,
+        $mc-stone 24px,
+        $mc-brown 24px,
+        $mc-brown 32px
+      );
+    background-size: 32px 8px;
+    z-index: 1;
+  }
+}

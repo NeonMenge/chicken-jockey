@@ -1,0 +1,52 @@
+// Styles for the bottom image
+
+.bottom-image-container {
+  padding: 3rem 0;
+  background-color: $mc-black;
+  position: relative;
+  overflow: hidden;
+  
+  // Add pixelated background pattern
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
+      linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    pointer-events: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .bottom-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 250px;
+      height: auto;
+      image-rendering: pixelated;
+      filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.5));
+      animation: float 3s ease-in-out infinite;
+      
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+    }
+  }
+}

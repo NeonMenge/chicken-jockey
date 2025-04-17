@@ -1,0 +1,169 @@
+// Styles for the About section
+
+.about-section {
+  padding: 5rem 0;
+  background-color: $mc-stone;
+  border-top: 8px solid $mc-brown;
+  border-bottom: 8px solid $mc-brown;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  
+  // Add a pixelated texture overlay
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='none' stroke='rgba(0,0,0,0.1)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 20px 20px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about__mascot-img {
+    display: block;
+    margin: 2rem auto 0;
+    max-width: 140px;
+    filter: drop-shadow(0 4px 0 #000);
+    image-rendering: pixelated;
+    border: 4px solid $mc-black;
+    border-radius: 12px;
+    background: $mc-white;
+    box-shadow: 6px 6px 0 $mc-brown;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.06) rotate(-3deg);
+      box-shadow: 12px 12px 0 $mc-brown;
+    }
+  }
+
+  .about__chicken-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .about__chicken {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about__meme {
+    flex: 0 0 auto;
+    
+    &--left {
+      margin-right: 1rem;
+    }
+    
+    &--right {
+      margin-left: 1rem;
+    }
+    
+    .meme-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about__chicken-container {
+      flex-direction: column;
+    }
+    
+    .about__meme {
+      margin: 1rem 0;
+      
+      &--left, &--right {
+        margin: 1rem 0;
+      }
+      
+      .meme-image {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    color: $mc-black;
+    margin-bottom: 10rem;
+    display: inline-block;
+    border: 4px solid $mc-black;
+    padding: 0.5rem 1.5rem;
+    background-color: $mc-white;
+    box-shadow: 6px 6px 0px $mc-black;
+    position: relative;
+    transform: rotate(-2deg);
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      background-color: $mc-green;
+      border: 3px solid $mc-black;
+      transform: rotate(15deg);
+    }
+  }
+
+  &__content {
+    background-color: rgba($mc-white, 0.7);
+    border: 4px solid $mc-black;
+    padding: 3rem;
+    margin-top: 2rem;
+    box-shadow: 8px 8px 0px $mc-black;
+    
+    p {
+      font-size: 1.8rem;
+      line-height: 1.7;
+      color: $mc-black;
+      margin-bottom: 3rem;
+      text-align: left;
+      position: relative;
+      padding-left: 1.5rem;
+      
+      &:before {
+        content: '>';
+        position: absolute;
+        left: 0;
+        color: $mc-green;
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    }
+    
+    // Style for ThreeChicken component
+    .three-chicken-container {
+      margin-top: 8rem !important;
+      padding-top: 2rem;
+    }
+  }
+}

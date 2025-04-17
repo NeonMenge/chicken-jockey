@@ -1,0 +1,41 @@
+@import '../styles/abstracts/variables';
+
+.pixel-btn {
+  display: inline-block;
+  padding: 1.25rem 3rem;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, $mc-green 0%, darken($mc-green, 5%) 50%, $mc-green 100%);
+  color: $mc-white;
+  border: 4px solid $mc-black;
+  box-shadow: 6px 6px 0 $mc-black;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+  border-radius: 8px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+  outline: none;
+  margin: 0.5rem 0;
+}
+
+.pixel-btn:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 4px 4px 0 $mc-black;
+}
+
+.pixel-btn:hover, .pixel-btn:focus {
+  background: linear-gradient(135deg, lighten($mc-green, 5%) 0%, $mc-green 100%);
+  box-shadow: 10px 10px 0 $mc-black;
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, $mc-green 0%, darken($mc-green, 10%) 100%);
+  
+  &:hover {
+    background: linear-gradient(135deg, lighten($mc-green, 5%) 0%, $mc-green 100%);
+  }
+}
