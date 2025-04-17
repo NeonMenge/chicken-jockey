@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from '../assets/images/ezgif-69c04481751e61.gif';
+import bannerImage from '../assets/images/Header.gif';
 import jockeyLogo from '../assets/images/logos/jockeytext.png';
 
 const Header = () => {
