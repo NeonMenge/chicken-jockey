@@ -2,8 +2,9 @@ import React from 'react';
 import ThreeChicken from './ThreeChicken';
 
 // Import the actual meme images
-import aboutMemeLeft from '../assets/images/memes/about-meme-left.png';
-import aboutMemeRight from '../assets/images/memes/about-meme-right.png';
+import aboutMemeLeft from '../assets/images/memes/about-meme-left.webp';
+import aboutMemeRight from '../assets/images/memes/about-meme-right.webp';
+
 
 const About = () => {
   return (

@@ -3,9 +3,9 @@ import './ChickenJockify.scss';
 import SectionDivider from './SectionDivider';
 
 // Import the howto images
-import howtoLeft from '../assets/images/memes/howto-left.jpg';
-import howtoMid from '../assets/images/memes/howto-mid.png';
-import howtoRight from '../assets/images/memes/howto-right.png';
+import howtoLeft from '../assets/images/memes/howto-left.webp';
+import howtoMid from '../assets/images/memes/howto-mid.webp';
+import howtoRight from '../assets/images/memes/howto-right.webp';
 
 const ChickenJockify = () => {
   return (

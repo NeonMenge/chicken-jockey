@@ -2,8 +2,8 @@ import React from 'react';
 import ExchangeButtons from './ExchangeButtons';
 
 // Import the actual meme images
-import heroMemeLeft from '../assets/images/memes/hero-meme-left.png';
-import heroMemeRight from '../assets/images/memes/hero-meme-right.png';
+import heroMemeLeft from '../assets/images/memes/hero-meme-left.webp';
+import heroMemeRight from '../assets/images/memes/hero-meme-right.webp';
 
 const Hero = () => {
     return (

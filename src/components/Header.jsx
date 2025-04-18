@@ -1,6 +1,8 @@
 import React from 'react';
-import bannerImage from '../assets/images/Header.gif';
-import jockeyLogo from '../assets/images/logos/jockeytext.png';
+import bannerImage from '../assets/images/Header.webp';
+import jockeyLogo from '../assets/images/logos/jockeytext.webp';
+import './Header.scss';
+
 
 const Header = () => {
   return (
@@ -9,6 +11,7 @@ const Header = () => {
         <div className="container">
           <nav className="header__nav">
             <div className="header__logo">
+              
               <a href="#">
                 <img 
                   src={jockeyLogo} 
@@ -26,10 +29,12 @@ const Header = () => {
         </div>
       </div>
       <div className="header__banner">
-        <img src={bannerImage} alt="Chicken Jockey Banner" className="banner-image" />
+        <p className='text1'>Chicken</p>
+        <p className='text2'>Jockey</p>
+        <img src={bannerImage} alt="Chicken Jockey Banner" className="banner-image"/>
       </div>
     </header>
   );
 };
 
-export default Header;
+export default Header

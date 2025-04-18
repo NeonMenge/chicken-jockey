@@ -1,5 +1,5 @@
 import React from 'react';
-import pixelChickenImage from '../assets/images/pixel-chicken.png';
+import pixelChickenImage from '../assets/images/pixel-chicken.webp';
 
 const BottomImage = () => {
   return (

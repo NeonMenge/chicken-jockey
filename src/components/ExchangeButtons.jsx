@@ -2,9 +2,9 @@ import React from 'react';
 import './ExchangeButtons.scss';
 
 // Import actual exchange logos
-import jupiterLogo from '../assets/images/exchanges/jupiter-ag-jup-logo.jpg';
-import dexScreenerLogo from '../assets/images/exchanges/dex-screener-icon.jpg';
-import moonshotLogo from '../assets/images/exchanges/moonshot-logo.jpg';
+import jupiterLogo from '../assets/images/exchanges/jupiter-ag-jup-logo.webp';
+import dexScreenerLogo from '../assets/images/exchanges/dex-screener-icon.webp';
+import moonshotLogo from '../assets/images/exchanges/moonshot-logo.webp';
 
 const exchanges = [
   {

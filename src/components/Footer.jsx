@@ -46,16 +46,16 @@ const Footer = () => {
           </h1>
         </div>
         <div className="footer__content">
-          <div className="footer__copyright">
+          <div style={{margin: "12px"}} className="footer__copyright">
             &copy; {currentYear} Chicken Jockey ($JOCKEY). All rights reserved. Bawk!
           </div>
           <div className="footer__social">
-            <a href="https://x.com/jockeyonsolana" target="_blank" rel="noopener noreferrer">
-              <span className="social-icon">𝕏</span>
+            <a style={{margin: "12px"}} href="https://x.com/jockeyonsolana" target="_blank" rel="noopener noreferrer">
+              <span style={{marginRight: "6px"}} className="social-icon">𝕏</span>
               Twitter
             </a>
-            <a href="https://dexscreener.com/solana/fykuc1aehv5ziauh6wf7zuuvc3b5hehzwuerxlwwmu88" target="_blank" rel="noopener noreferrer">
-              <span className="social-icon">📊</span>
+            <a style={{margin: "12px"}} href="https://dexscreener.com/solana/fykuc1aehv5ziauh6wf7zuuvc3b5hehzwuerxlwwmu88" target="_blank" rel="noopener noreferrer">
+              <span style={{marginRight: "6px"}} className="social-icon">📊</span>
               DexScreener
             </a>
           </div>

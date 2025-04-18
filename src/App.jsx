@@ -9,7 +9,7 @@ import ChickenJockify from './components/ChickenJockify';
 import BottomImage from './components/BottomImage';
 import Footer from './components/Footer';
 import VideoBackground from './components/VideoBackground';
-import minecraftVideo from './assets/videos/minecraft-background.mp4';
+import minecraftVideo from './assets/videos/background-video-small.mp4';
 
 function App() {
   return (
