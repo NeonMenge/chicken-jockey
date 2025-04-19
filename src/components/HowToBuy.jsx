@@ -1,10 +1,8 @@
 import React from 'react';
 
-// Placeholder imports - replace with actual image paths
-// import walletIcon from '../assets/images/wallet-icon.png'; 
-// import solIcon from '../assets/images/sol-icon.png';
-// import swapIcon from '../assets/images/swap-icon.png';
-// import jokeyIcon from '../assets/images/jokey-icon.png'; 
+import './HowToBuy.scss';
+
+
 
 const HowToBuy = () => {
   // Function to handle copying contract address
@@ -46,7 +44,7 @@ const HowToBuy = () => {
                 className="contract-address" 
                 onClick={() => copyToClipboard("B91Nyc6SnWqr5DRR34eEMKuZrWh4zBhW9VhX4UNLpump")}
                 title="Click to copy"
-                style={{backgroundColor: 'grey', color: 'white', overflowWrap: 'break-word', margin: '16px 0 16px 0', padding: '12px', opacity: '80%'}}
+                style={{backgroundColor: 'grey', color: 'white', overflowWrap: 'break-word', margin: '16px 0 16px 0', padding: '12px', opacity: '80%', }}
               >
                 B91Nyc6SnWqr5DRR34eEMKuZrWh4zBhW9VhX4UNLpump
               </p>
