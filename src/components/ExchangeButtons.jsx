@@ -13,7 +13,7 @@ const exchanges = [
     url: 'https://jup.ag/tokens/B91Nyc6SnWqr5DRR34eEMKuZrWh4zBhW9VhX4UNLpump'
   },
   {
-    name: 'Dexscreener',
+    name: 'Dex',
     logo: dexScreenerLogo,
     url: 'https://dexscreener.com/solana/fykuc1aehv5ziauh6wf7zuuvc3b5hehzwuerxlwwmu88'
   },
