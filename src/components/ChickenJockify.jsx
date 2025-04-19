@@ -13,7 +13,7 @@ const ChickenJockify = () => {
       <SectionDivider />
       <div className="container">
         <div className="instructions-header">
-          <h2 className="minecraft-title">CRAFTING GUIDE</h2>
+          <h2 className="minecraft-title" style={{marginTop: '12px'}}>CRAFTING GUIDE</h2>
           <h1 className="minecraft-header">HOW TO CRAFT YOUR OWN<br />CHICKEN JOCKEY WITH CHAT GPT</h1>
         </div>
         

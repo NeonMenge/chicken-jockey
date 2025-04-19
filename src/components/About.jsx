@@ -13,7 +13,7 @@ const About = () => {
         <h2>About Chicken Jockey ($JOCKEY)</h2>
         <div className="about__content">
           <p>
-          Inspired by the legendary Minecraft mob and viral movie moment, Chicken Jockey ($Jockey) is a memecoin for all solana users, minecraft players, and fans. We are building a meme coin community centered around the viral chicken jockey meme; 
+          Inspired by the legendary Minecraft mob and viral movie moment, Chicken Jockey ($Jockey) is a memecoin for all solana users, minecraft players, and fans. We are building a community centered around the viral chicken jockey meme; 
           and working to promote the onboarding of minecraft players around the world into new cryptocurrency users through a familar character. 
           </p>
 

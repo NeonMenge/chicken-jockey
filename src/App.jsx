@@ -10,6 +10,8 @@ import BottomImage from './components/BottomImage';
 import Footer from './components/Footer';
 import VideoBackground from './components/VideoBackground';
 import minecraftVideo from './assets/videos/background-video-small.mp4';
+import { Analytics } from "@vercel/analytics/react"
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         </main>
         <BottomImage />
         <Footer />
+        <Analytics/>
       </div>
     </>
   );

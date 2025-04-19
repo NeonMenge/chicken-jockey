@@ -41,14 +41,15 @@ const HowToBuy = () => {
             <div className="step__icon-placeholder" aria-label="Swap" role="img">🔄</div>
             <h3>3. Go to Raydium/Jupiter</h3>
             <p>Connect your wallet to Raydium or Jupiter Swap. Paste the $JOCKEY contract address into the swap.</p>
-             <p>Contract: <span 
+             <p>Contract:</p>
+             <p 
                 className="contract-address" 
                 onClick={() => copyToClipboard("B91Nyc6SnWqr5DRR34eEMKuZrWh4zBhW9VhX4UNLpump")}
                 title="Click to copy"
+                style={{backgroundColor: 'grey', color: 'white', overflowWrap: 'break-word', margin: '16px 0 16px 0', padding: '12px', opacity: '80%'}}
               >
                 B91Nyc6SnWqr5DRR34eEMKuZrWh4zBhW9VhX4UNLpump
-              </span>
-            </p>
+              </p>
           </div>
           <div className="step">
             {/* <img src={jokeyIcon} alt="Chicken Jockey Icon" className="step__icon" /> */}

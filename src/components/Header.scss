@@ -1,56 +1,68 @@
 .header__banner {
-    position: relative;
+  position: relative;
 }
 
 .text1, .text2 {
-    position: absolute;
-    font-size: 3.5vw;
-    color: rgb(184, 192, 104);
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+  position: absolute;
+  font-size: 4vw;
+  color: rgb(184, 192, 104);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
 }
 
 .text2 {
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%); /* Centers text */
-    animation: bounce 3s ease-in-out infinite;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%); /* Centers text */
+  animation: bounce 4s ease-in-out infinite;
 }
 
 .text1 {
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%, -50%); /* Centers text */
-    animation: bounce 3s ease-in-out infinite;
+  top: 50%;
+  left: 6%;
+  transform: translate(-50%, -50%); /* Centers text */
+  animation: bounce 4s ease-in-out infinite;
 }
 
 @media screen and (min-width: 1000px) {
-    .text1, .text2 {
-        position: absolute;
-        font-size: 3.5rem;
-        color: rgb(184, 192, 104);
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -3px 3px 0 #000, 1px 1px 0 #000;
-    }
+  .text1, .text2 {
+      position: absolute;
+      font-size: 4.2rem;
+      color: rgb(184, 192, 104);
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -3px 3px 0 #000, 1px 1px 0 #000;
   }
+}
 
 @media screen and (max-width: 500px) {
-    .text1, .text2 {
-        position: absolute;
-        font-size: 3.5vw;
-        color: rgb(184, 192, 104);
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    }
+  .text1, .text2 {
+      position: absolute;
+      color: rgb(184, 192, 104);
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000, 1px 1px 0 #000;
+      animation: slowerBounce 4s ease-in-out infinite;
+  }
 }
-  
+
 
 @keyframes bounce {
-    0% {
-      transform: translateY(-25px);
-    }
-    50% {
-      transform: translateY(0px); /* Move down */
-    }
-    100% {
-      transform: translateY(-25px);
-    }
+  0% {
+    transform: translateY(-25px);
   }
+  50% {
+    transform: translateY(0px); /* Move down */
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes slowerBounce {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px); /* Move down */
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
 

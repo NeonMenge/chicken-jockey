@@ -5,6 +5,9 @@ import ExchangeButtons from './ExchangeButtons';
 import heroMemeLeft from '../assets/images/memes/hero-meme-left.webp';
 import heroMemeRight from '../assets/images/memes/hero-meme-right.webp';
 
+import './Hero.scss';
+
+
 const Hero = () => {
     return (
         <section className="hero-section" id="hero">
