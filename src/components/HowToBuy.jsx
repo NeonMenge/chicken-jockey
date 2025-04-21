@@ -37,8 +37,8 @@ const HowToBuy = () => {
           <div className="step">
             {/* <img src={swapIcon} alt="Swap Icon" className="step__icon" /> */}
             <div className="step__icon-placeholder" aria-label="Swap" role="img">🔄</div>
-            <h3>3. Go to Raydium/Jupiter</h3>
-            <p>Connect your wallet to Raydium or Jupiter Swap. Paste the $JOCKEY contract address into the swap.</p>
+            <h3>3. Go to Jupiter (jup.ag)</h3>
+            <p>Connect your wallet to Jupiter Swap. Paste the $JOCKEY contract address into the swap.</p>
              <p>Contract:</p>
              <p 
                 className="contract-address" 
